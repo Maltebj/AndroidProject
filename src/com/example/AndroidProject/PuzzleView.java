@@ -56,14 +56,14 @@ public class PuzzleView extends View {
         Rect rect = new Rect();
             SHAPE_SIZE = getWidth()/NUM_COLS;
         //int x = mRandom.nextInt(getWidth()-SHAPE_SIZE);
-        int y = b.getCol()*SHAPE_SIZE;
-        int x = b.getRow()*SHAPE_SIZE;
+        int y = b.getRow()*SHAPE_SIZE;
+        int x = b.getCol()*SHAPE_SIZE;
         int x1 = x+SHAPE_SIZE;
         int y1 = y+SHAPE_SIZE;
-        if(b.getOrientation() == Block.Orientation.Vertical){
+        if(b.getOrientation() == Block.Orientation.Horizontal){
           x1 = x+SHAPE_SIZE*b.getLength();
         }
-        if(b.getOrientation() == Block.Orientation.Horizontal){
+        if(b.getOrientation() == Block.Orientation.Vertical){
             y1 = y+SHAPE_SIZE*b.getLength();
         }
 
@@ -92,17 +92,18 @@ public class PuzzleView extends View {
                 break;
             case MotionEvent.ACTION_MOVE:
                 if(mMovingShape != null){
-                    if(mMovingShape.getOrientation() == Block.Orientation.Horizontal){
+                    if(mMovingShape.getOrientation() == Block.Orientation.Vertical){
 
-                            y = Math.max(0,Math.min(y,getHeight()-SHAPE_SIZE*mMovingShape.getLength()));
+                         //  y = Math.max(getBlockFromBottom(x,mMovingShape.getRect().bottom),Math.min(y,getBlockFromTop(x,mMovingShape.getRect().top)));
+                            y = Math.max(getBlockFromTop(x,mMovingShape.getRect().top),Math.min(y,getBlockFromBottom(x,mMovingShape.getRect().bottom)));
                             x = mMovingShape.getRect().left;
-                        //x = Math.max(0,Math.min(x,getWidth()-SHAPE_SIZE));
+
                     }
                     else{
 
-                        x = Math.max(0,Math.min(x,getWidth()-SHAPE_SIZE*mMovingShape.getLength()));
+                        x = Math.max(getBlockFromLeft(mMovingShape.getRect().left,y),Math.min(x,getBlockFromRight(mMovingShape.getRect().right,y)));
                         y = mMovingShape.getRect().top;
-                        //y = Math.max(0,Math.min(y,getHeight()-SHAPE_SIZE));
+
                     }
 
                         mMovingShape.getRect().offsetTo(x,y);
@@ -133,16 +134,101 @@ public class PuzzleView extends View {
         }
         return null;
     }
-    private boolean isShapeLocatedOn(int x, int y){
-        for(Block block:mBlocks){
-            if (block != mMovingShape){
-                if ( block.getRect().intersect(x,y,SHAPE_SIZE,SHAPE_SIZE)){
-                    System.out.println("Virkar");
-                    return true;
-                }
+
+    private int getBlockFromLeft(int x,int y){
+
+
+
+        int number = x+1;
+        Double a = 0.0;
+        int finalValue;
+        while(number > 0)
+        {
+           Block nextBlock = shapeLocatedOn(number,y);
+            if(nextBlock != null && nextBlock.getRect().left != mMovingShape.getRect().left && nextBlock.getRect().right != mMovingShape.getRect().right )
+            {
+                a = (double)number;
+                break;
             }
+            number = number - SHAPE_SIZE/2;
         }
-        return false;
+
+        a = a/SHAPE_SIZE;
+        finalValue = (int)Math.ceil(a);
+        return (finalValue*SHAPE_SIZE);
+    }
+    private int getBlockFromRight(int x,int y){
+
+
+        //
+        int number = x-1;
+        Double a = (double)number;
+        int finalValue;
+        while(number < getWidth())
+        {
+            Block nextBlock = shapeLocatedOn(number,y);
+            if(nextBlock != null && nextBlock.getRect().left != mMovingShape.getRect().left && nextBlock.getRect().right != mMovingShape.getRect().right )
+            {
+                a = (double)number;
+                break;
+            }
+            number = number + SHAPE_SIZE;
+        }
+        a = a/SHAPE_SIZE;
+        finalValue = (int)Math.floor(a);
+        if(number >= getWidth())
+        {
+            return getWidth()-SHAPE_SIZE*mMovingShape.getLength();
+        }
+        return (finalValue*SHAPE_SIZE-(mMovingShape.getLength()*SHAPE_SIZE));
+
+    }
+    private int getBlockFromTop(int x,int y){
+
+        int number = y-1;
+        Double a = 0.0;
+        int finalValue;
+        while(number > 0)
+        {
+            Block nextBlock = shapeLocatedOn(x,number);
+            if(nextBlock != null && nextBlock.getRect().top != mMovingShape.getRect().top && nextBlock.getRect().bottom != mMovingShape.getRect().bottom )
+            {
+                a = (double)number;
+                break;
+            }
+            number = number - (SHAPE_SIZE/2);
+        }
+        a = a/SHAPE_SIZE;
+        finalValue = (int)Math.ceil(a);
+        return (finalValue*SHAPE_SIZE);
+    }
+    private int getBlockFromBottom(int x,int y){
+
+
+        //
+        int number = y+1;
+        Double a = (double)getWidth();
+        int finalValue;
+        while(number < getHeight())
+        {
+            Block nextBlock = shapeLocatedOn(x,number);
+            if(nextBlock != null && nextBlock.getRect().bottom != mMovingShape.getRect().bottom)
+            {
+                a = (double)number;
+                break;
+            }
+            number = number + (SHAPE_SIZE/2);
+        }
+        a = a/SHAPE_SIZE;
+        System.out.println(a);
+        finalValue = (int)Math.floor(a);
+        System.out.println(finalValue);
+        if(finalValue >= 6)
+        {
+            return getHeight()-SHAPE_SIZE*mMovingShape.getLength();
+        }
+        return (finalValue*SHAPE_SIZE-(mMovingShape.getLength()*SHAPE_SIZE));
+
     }
 
 }

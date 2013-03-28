@@ -20,13 +20,15 @@ public class Block {
         private int m_color;
         private Rect m_rect;
 
-        public Block( Orientation orientation, int col, int row, int length,int color,Rect rect ) {
+
+        public Block( Orientation orientation, int col, int row, int length,int color,Rect rect) {
             m_orientation = orientation;
             m_col = col;
             m_row = row;
             m_length = length;
             m_color = color;
             m_rect = rect;
+
         }
 
         public Block( Block other ) {
