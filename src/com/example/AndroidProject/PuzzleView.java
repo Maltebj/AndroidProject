@@ -50,7 +50,7 @@ public class PuzzleView extends View {
     }
 
     public void addShapes(List<Block> blocks){
-
+        mBlocks.clear();
         for(Block b:blocks)
         {
         Rect rect = new Rect();
@@ -72,6 +72,7 @@ public class PuzzleView extends View {
 
         mBlocks.add(b);
         }
+        invalidate();
     }
     protected void onDraw(Canvas canvas){
 
