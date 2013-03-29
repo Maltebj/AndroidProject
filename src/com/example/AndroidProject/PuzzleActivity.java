@@ -102,6 +102,12 @@ public class PuzzleActivity extends Activity {
             case R.id.nextButton:
             {
                 mId++;
+
+                SharedPreferences preferences = getSharedPreferences("DrawPrefs",MODE_PRIVATE);
+                SharedPreferences.Editor editor = preferences.edit();
+
+                editor.putInt("IdOfPuzzle",mId);
+                editor.commit();
                 try{
                     m_puzzle = puzzleHandler.readChallenge( manager.open("challenge.xml"),mId);
                 }catch(Exception ex){
@@ -122,6 +128,11 @@ public class PuzzleActivity extends Activity {
             }
             case R.id.prevButton:{
                 if(mId >1){
+                    SharedPreferences preferences = getSharedPreferences("DrawPrefs",MODE_PRIVATE);
+                    SharedPreferences.Editor editor = preferences.edit();
+
+                    editor.putInt("IdOfPuzzle",mId);
+                    editor.commit();
                     mId--;
                     try{
                         m_puzzle = puzzleHandler.readChallenge( manager.open("challenge.xml"),mId);
@@ -166,6 +177,10 @@ public class PuzzleActivity extends Activity {
         }
     public void puzzleWon(){
         Intent i = new Intent(this,NextLevelActivity.class);
+        SharedPreferences preferences = getSharedPreferences("DrawPrefs",MODE_PRIVATE);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putInt("IdOfPuzzle",mId);
+        editor.commit();
         i.putExtra(Intent.EXTRA_TEXT, Integer.toString(mId));
         i.putExtra("totalMoves", mMoveView.getText());
          startActivity(i);

@@ -2,6 +2,7 @@ package com.example.AndroidProject;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -52,7 +53,13 @@ public class NextLevelActivity extends Activity {
 
             intent = new Intent(this,PuzzleActivity.class);
             intent.putExtra(Intent.EXTRA_TEXT, Integer.toString(++levelId));
+            SharedPreferences preferences = getSharedPreferences("DrawPrefs",MODE_PRIVATE);
+            SharedPreferences.Editor editor = preferences.edit();
+
+            editor.putInt("IdOfPuzzle",levelId);
+            editor.commit();
         }
         startActivity(intent);
+        finish();
     }
 }
