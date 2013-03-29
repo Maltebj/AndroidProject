@@ -83,32 +83,18 @@ public class PuzzleHandler {
     public List<Block> setup( String puzzleStr ) {
         List<Block> blocks = new ArrayList<Block>();
         String blockssStr[] = puzzleStr.split( "," );
+        int i = 1;
         for ( String blockStr : blockssStr ) {
-            Block block = blockFromString(blockStr);
+            Block block = blockFromString(blockStr,i);
             if ( block != null ) {
                 blocks.add(block);
             }
             else { }
+            i++;
         }
         return blocks;
     }
-    /*
-    public List<Block> setup( List<Block> blocks ) {
-        m_blocks.clear();
-        m_isSolved = false;
-        for ( Block block : blocks ) {
-            if ( !canPlace( block ) ) {
-                return false;
-            }
-            if ( block == blocks.get( GOAL_BLOCK_ID ) ) {
-                m_isSolved = m_isSolved || doOverlap( block, m_goal );
-            }
-            m_blocks.add( new Block( block ) );
-        }
-        updateGrid();
-        return true;
-    }
-    */
+
     public List<Action> getActions( ) {
         List<Action> actions = new ArrayList<Action>( );
         if ( !isSolved() ) {
@@ -139,7 +125,7 @@ public class PuzzleHandler {
         }
         return actions;
     }
-    public static Block blockFromString( String blockStr ) {
+    public static Block blockFromString( String blockStr,int i ) {
         Block blockReturn = null;
         Scanner s = new Scanner( blockStr );
         s.findInLine("\\s*\\(\\s*(\\w+)\\s*(\\d+)\\s*(\\d+)\\s*(\\d+)\\s*\\)\\s*");
@@ -159,7 +145,7 @@ public class PuzzleHandler {
                     int col = Integer.parseInt( result.group( 2 ) );
                     int row = Integer.parseInt( result.group( 3 ) );
                     int length = Integer.parseInt( result.group( 4 ) );
-                    Block block = new Block( orientation, col, row, length, getRandomColor(),null );
+                    Block block = new Block( orientation, col, row, length, getRandomColor(i),null );
                     if ( isWithinBounds( block ) ) {
                         blockReturn = block;
                     }
@@ -191,7 +177,7 @@ public class PuzzleHandler {
     public List<Block> getCars() {
         return Collections.unmodifiableList(m_blocks);
     }
-    private final Block m_goal = new Block( Block.Orientation.Horizontal, GOAL_COL, GOAL_ROW, 1,getRandomColor(),null );
+    private final Block m_goal = new Block( Block.Orientation.Horizontal, GOAL_COL, GOAL_ROW, 1,getRandomColor(1),null );
 
     private List<Block> m_blocks;
     private boolean   m_isSolved;
@@ -268,34 +254,41 @@ public class PuzzleHandler {
             }
         }
     }
-    public static int getRandomColor(){
-        Random rand = new Random();
-        int i = rand.nextInt(100);
-
-        if(i<10)
+    public static int getRandomColor(int i){
+        if(i == 1)
         {
             i = Color.RED;
-        }else if(i<20)
-        {
-            i = Color.GREEN;
-        }else if(i<30)
+        }else if(i == 2)
         {
             i = Color.MAGENTA;
-        }else if(i<40){
+        }else if(i == 3){
             i = Color.BLACK;
-        }else if(i<50){
+        }else if(i == 4){
             i = Color.BLUE;
-        }else if(i<60){
+        }else if(i == 5){
             i = Color.CYAN;
-        }else if(i<70){
+        }else if(i == 6){
             i = Color.GRAY;
-        }else if(i<80){
+        }else if(i == 7){
             i = Color.DKGRAY;
-        }else if(i<90){
+        }else if(i == 8){
             i = Color.YELLOW;
-        }else{
-            i = Color.LTGRAY;
+        }else if(i == 9){
+            i = Color.GREEN;
+        }else if (i == 10){
+            i = Color.rgb(255,140,0);
         }
+        else if(i == 11){
+            i = Color.rgb(160,32,240);
+        }else if(i == 12){
+            i = Color.rgb(25,25,112);
+        }else if(i == 13){
+            i = Color.rgb(195,205,193);
+        }
+        else{
+            i = Color.rgb(238,203,173);
+        }
+
         return i;
     }
 

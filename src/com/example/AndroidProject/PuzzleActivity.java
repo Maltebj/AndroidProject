@@ -1,6 +1,7 @@
 package com.example.AndroidProject;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.AssetManager;
 import android.graphics.Color;
@@ -27,8 +28,9 @@ public class PuzzleActivity extends Activity {
     List<Block> m_blocks;
     Button mPrevButton;
     Button mNextButton;
+    Button mRestartButton;
     PuzzleHandler puzzleHandler = new PuzzleHandler();
-    int mId;     //TODO LAGA FYRIR BÍL
+    int mId;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,14 +39,30 @@ public class PuzzleActivity extends Activity {
         mMoveView = (TextView) findViewById(R.id.total_moves);
         mPrevButton = (Button) findViewById(R.id.prevButton);
         mNextButton = (Button) findViewById(R.id.nextButton);
+        mRestartButton = (Button) findViewById(R.id.puzzleRestart);
         mLevelView = (TextView) findViewById(R.id.LevelNumber);
 
 
         SharedPreferences preferences = getSharedPreferences("DrawPrefs", MODE_PRIVATE);
         SharedPreferences.Editor editor = preferences.edit();
 
-        mId = preferences.getInt("IdOfPuzzle", 1);  // TODO SETJA ALLA BÍLA INN.
+        mId = preferences.getInt("IdOfPuzzle", 0);
+        if (mId == 1)
+        {
+            Bundle extras = getIntent().getExtras();
+            if (extras == null) {
+
+            }else
+            {
+
+            String value1 = extras.getString(Intent.EXTRA_TEXT);
+            if (value1 != null) {
+                mId = Integer.parseInt(value1);
+            }
+            }
+        }
         mLevelView.setText(Integer.toString(mId));
+
 
 
         AssetManager manager = getAssets();
@@ -61,7 +79,7 @@ public class PuzzleActivity extends Activity {
 
             @Override
             public void run() {
-               mPuzzleView.addShapes(m_blocks);
+               mPuzzleView.addShapes(m_blocks,mId);
             }
         });
         mPuzzleView.setCustomEventHandler(new DragEventHandler() {
@@ -76,6 +94,7 @@ public class PuzzleActivity extends Activity {
     }
     public void puzzle(View view){
 
+        mMoveView.setText("0");
         int id = view.getId();
         AssetManager manager = getAssets();
         switch(id){
@@ -96,7 +115,7 @@ public class PuzzleActivity extends Activity {
 
                     @Override
                     public void run() {
-                        mPuzzleView.addShapes(m_blocks);
+                        mPuzzleView.addShapes(m_blocks,mId);
                     }
                 });
                 break;
@@ -117,13 +136,38 @@ public class PuzzleActivity extends Activity {
 
                         @Override
                         public void run() {
-                            mPuzzleView.addShapes(m_blocks);
+                            mPuzzleView.addShapes(m_blocks,mId);
                         }
                     });
 
                 }
                 break;
             }
+            case R.id.puzzleRestart:{
+                    try{
+                        m_puzzle = puzzleHandler.readChallenge( manager.open("challenge.xml"),mId);
+                    }catch(Exception ex){
+                        ex.printStackTrace();
+                    }
+                    if(m_puzzle != null){
+                        m_blocks = puzzleHandler.setup(m_puzzle);
+                    }
+                    mLevelView.setText(Integer.toString(mId));
+                    mPuzzleView.post(new Runnable() {
+
+                        @Override
+                        public void run() {
+                            mPuzzleView.addShapes(m_blocks,mId);
+                        }
+                    });
+                break;
+                }
+            }
         }
+    public void puzzleWon(){
+        Intent i = new Intent(this,NextLevelActivity.class);
+        i.putExtra(Intent.EXTRA_TEXT, Integer.toString(mId));
+        i.putExtra("totalMoves", mMoveView.getText());
+         startActivity(i);
     }
-}
+    }

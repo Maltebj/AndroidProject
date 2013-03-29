@@ -23,10 +23,12 @@ public class MyActivity extends Activity {
         {
             case R.id.button_play:
                 intent = new Intent(this,PuzzleActivity.class);
+                intent.putExtra(Intent.EXTRA_TEXT,"1");
                 startActivity(intent);
                 break;
             case R.id.button_about:
                 intent = new Intent(this,PuzzleListActivity.class);
+                intent.putExtra(Intent.EXTRA_TEXT,"1");
                 startActivity(intent);
                 break;
         }

@@ -1,6 +1,8 @@
 package com.example.AndroidProject;
 
 import android.content.Context;
+import android.content.Intent;
+import android.content.pm.LabeledIntent;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
@@ -25,8 +27,10 @@ public class PuzzleView extends View {
 
     public static final int NUM_COLS = 6;
     public static final int NUM_ROWS = 6;
+    public static final int GOAL_COL = 5;
+    public static final int GOAL_ROW = 3;
+    private int id;
     private int SHAPE_SIZE = getWidth();
-
     private Paint mPaint = new Paint();
     private Block mMovingShape = null;
     private List<Block> mBlocks = new ArrayList<Block>();
@@ -36,7 +40,6 @@ public class PuzzleView extends View {
     public PuzzleView(Context context, AttributeSet attrs){
         super(context,attrs);
         setBackgroundColor(Color.WHITE);
-
         mPaint.setStyle(Paint.Style.FILL_AND_STROKE);
     }
 
@@ -49,8 +52,9 @@ public class PuzzleView extends View {
         setMeasuredDimension(size,size);
     }
 
-    public void addShapes(List<Block> blocks){
+    public void addShapes(List<Block> blocks,int i){
         mBlocks.clear();
+        id = i;
         for(Block b:blocks)
         {
         Rect rect = new Rect();
@@ -119,6 +123,14 @@ public class PuzzleView extends View {
                         mListener.onShapeMoved();
 
                         invalidate();
+                        if(shapeLocatedOn(SHAPE_SIZE*GOAL_COL,SHAPE_SIZE*GOAL_ROW) != null)
+                        {
+                            if(shapeLocatedOn(SHAPE_SIZE*GOAL_COL,SHAPE_SIZE*GOAL_ROW).getColor() == Color.RED){
+                                PuzzleActivity p = (PuzzleActivity)super.getContext();
+                                p.puzzleWon();
+
+                            }
+                        }
                     }
                 }
                 break;

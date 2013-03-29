@@ -30,20 +30,22 @@
     <file path="$PROJECT_DIR$/.idea/workspace.xml" changelist="e8cff653-fe99-4bd2-b6f9-b93da5fbe133" time="1364077408724" ignored="false" />
     <file path="$PROJECT_DIR$/../DrawShapes/.idea/workspace.xml" changelist="e8cff653-fe99-4bd2-b6f9-b93da5fbe133" time="1364077408724" ignored="false" />
     <file path="$PROJECT_DIR$/.idea/compiler.xml" changelist="e8cff653-fe99-4bd2-b6f9-b93da5fbe133" time="1364059943539" ignored="false" />
-    <file path="/Dummy.txt" changelist="e8cff653-fe99-4bd2-b6f9-b93da5fbe133" time="1364512061797" ignored="false" />
+    <file path="/Dummy.txt" changelist="e8cff653-fe99-4bd2-b6f9-b93da5fbe133" time="1364563683372" ignored="false" />
     <file path="/Puzzle.xml" changelist="e8cff653-fe99-4bd2-b6f9-b93da5fbe133" time="1364066685895" ignored="false" />
     <file path="/DragEventHandler.java" changelist="e8cff653-fe99-4bd2-b6f9-b93da5fbe133" time="1364068390898" ignored="false" />
-    <file path="/PuzzleActivity.java" changelist="e8cff653-fe99-4bd2-b6f9-b93da5fbe133" time="1364523313419" ignored="false" />
-    <file path="/PuzzleView.java" changelist="e8cff653-fe99-4bd2-b6f9-b93da5fbe133" time="1364522995646" ignored="false" />
+    <file path="/PuzzleActivity.java" changelist="e8cff653-fe99-4bd2-b6f9-b93da5fbe133" time="1364575816802" ignored="false" />
+    <file path="/PuzzleView.java" changelist="e8cff653-fe99-4bd2-b6f9-b93da5fbe133" time="1364574139034" ignored="false" />
     <file path="/main.xml" changelist="e8cff653-fe99-4bd2-b6f9-b93da5fbe133" time="1364066880079" ignored="false" />
-    <file path="/MyActivity.java" changelist="e8cff653-fe99-4bd2-b6f9-b93da5fbe133" time="1364066866230" ignored="false" />
-    <file path="/AndroidManifest.xml" changelist="e8cff653-fe99-4bd2-b6f9-b93da5fbe133" time="1364068451804" ignored="false" />
-    <file path="/PuzzleListActivity.java" changelist="e8cff653-fe99-4bd2-b6f9-b93da5fbe133" time="1364126116103" ignored="false" />
-    <file path="/PuzzleHandler.java" changelist="e8cff653-fe99-4bd2-b6f9-b93da5fbe133" time="1364137105684" ignored="false" />
+    <file path="/MyActivity.java" changelist="e8cff653-fe99-4bd2-b6f9-b93da5fbe133" time="1364575429801" ignored="false" />
+    <file path="/AndroidManifest.xml" changelist="e8cff653-fe99-4bd2-b6f9-b93da5fbe133" time="1364575403459" ignored="false" />
+    <file path="/PuzzleListActivity.java" changelist="e8cff653-fe99-4bd2-b6f9-b93da5fbe133" time="1364567835494" ignored="false" />
+    <file path="/PuzzleHandler.java" changelist="e8cff653-fe99-4bd2-b6f9-b93da5fbe133" time="1364570406708" ignored="false" />
     <file path="/Block.java" changelist="e8cff653-fe99-4bd2-b6f9-b93da5fbe133" time="1364489914466" ignored="false" />
     <file path="/PuzzleNames.java" changelist="e8cff653-fe99-4bd2-b6f9-b93da5fbe133" time="1364123978362" ignored="false" />
     <file path="/puzzle.xml" changelist="e8cff653-fe99-4bd2-b6f9-b93da5fbe133" time="1364522286948" ignored="false" />
     <file path="/strings.xml" changelist="e8cff653-fe99-4bd2-b6f9-b93da5fbe133" time="1364521140566" ignored="false" />
+    <file path="/NextLevelActivity.java" changelist="e8cff653-fe99-4bd2-b6f9-b93da5fbe133" time="1364575771967" ignored="false" />
+    <file path="/NextLevel.xml" changelist="e8cff653-fe99-4bd2-b6f9-b93da5fbe133" time="1364565981040" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,22 +60,6 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint url="file://$PROJECT_DIR$/src/com/example/AndroidProject/PuzzleActivity.java" line="78" class="com.example.AndroidProject.PuzzleActivity" package="com.example.AndroidProject">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-    </line_breakpoints>
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
@@ -109,6 +95,7 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -118,30 +105,71 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="PuzzleActivity.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="NextLevelActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/example/AndroidProject/NextLevelActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="36" column="51" selection-start="1153" selection-end="1153" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DragEventHandler.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/example/AndroidProject/DragEventHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="23" selection-start="252" selection-end="252" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MyActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/example/AndroidProject/MyActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="21" column="34" selection-start="531" selection-end="531" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="55" selection-start="451" selection-end="451" vertical-scroll-proportion="0.2882883">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PuzzleActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/example/AndroidProject/PuzzleActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="101" column="34" selection-start="3176" selection-end="3176" vertical-scroll-proportion="-0.0050251256">
+            <state line="172" column="53" selection-start="5486" selection-end="5486" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="e#1873#2016#0" expanded="true" />
-                <element signature="e#2005#2006#0" expanded="true" />
-                <element signature="e#2967#3151#0" expanded="true" />
-                <element signature="e#3132#3133#0" expanded="true" />
-                <element signature="e#3746#3950#0" expanded="true" />
-                <element signature="e#3927#3928#0" expanded="true" />
+                <element signature="method#puzzle#0;class#PuzzleActivity#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="puzzle.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/puzzle.xml">
-          <provider selected="true" editor-type-id="android-designer">
-            <state />
-          </provider>
-          <provider editor-type-id="text-editor">
-            <state line="19" column="19" selection-start="858" selection-end="858" vertical-scroll-proportion="0.0">
+      <file leaf-file-name="Block.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/example/AndroidProject/Block.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="77" column="32" selection-start="2140" selection-end="2140" vertical-scroll-proportion="0.0">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PuzzleHandler.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/example/AndroidProject/PuzzleHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="28" column="0" selection-start="649" selection-end="732" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="method#readChallenge#1;class#PuzzleHandler#0" expanded="false" />
+                <element signature="e#2826#2833#0" expanded="true" />
+                <element signature="e#3258#3266#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -149,16 +177,11 @@
       <file leaf-file-name="PuzzleView.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/example/AndroidProject/PuzzleView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="46" selection-start="913" selection-end="913" vertical-scroll-proportion="0.0">
+            <state line="128" column="0" selection-start="4316" selection-end="4316" vertical-scroll-proportion="-7.12">
               <folding>
-                <element signature="docComment;class#PuzzleView#0" expanded="false" />
-                <element signature="e#813#820#0" expanded="true" />
-                <element signature="method#PuzzleView#0;class#PuzzleView#0" expanded="false" />
-                <element signature="method#setCustomEventHandler#0;class#PuzzleView#0" expanded="false" />
+                <element signature="e#988#995#0" expanded="true" />
                 <element signature="method#onMeasure#0;class#PuzzleView#0" expanded="false" />
-                <element signature="method#addShapes#0;class#PuzzleView#0" expanded="false" />
                 <element signature="method#onDraw#0;class#PuzzleView#0" expanded="false" />
-                <element signature="method#onTouchEvent#0;class#PuzzleView#0" expanded="false" />
                 <element signature="method#shapeLocatedOn#0;class#PuzzleView#0" expanded="false" />
                 <element signature="method#getBlockFromLeft#0;class#PuzzleView#0" expanded="false" />
                 <element signature="method#getBlockFromRight#0;class#PuzzleView#0" expanded="false" />
@@ -188,25 +211,27 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/res/layout/Puzzle.xml" />
-        <option value="$PROJECT_DIR$/src/com/example/AndroidProject/MyActivity.java" />
-        <option value="$PROJECT_DIR$/res/layout/main.xml" />
-        <option value="$PROJECT_DIR$/src/com/example/AndroidProject/DragEventHandler.java" />
-        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/res/values/challenge.xml" />
         <option value="$PROJECT_DIR$/src/com/example/AndroidProject/Action.java" />
-        <option value="$PROJECT_DIR$/src/com/example/AndroidProject/PuzzleListActivity.java" />
-        <option value="$PROJECT_DIR$/src/com/example/AndroidProject/PuzzleHandler.java" />
         <option value="$PROJECT_DIR$/src/com/example/AndroidProject/PuzzleNames.java" />
         <option value="$PROJECT_DIR$/src/com/example/AndroidProject/Block.java" />
         <option value="$PROJECT_DIR$/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/src/com/example/AndroidProject/PuzzleView.java" />
+        <option value="$PROJECT_DIR$/assets/challenge.xml" />
+        <option value="$PROJECT_DIR$/res/layout/NextLevel.xml" />
+        <option value="$PROJECT_DIR$/src/com/example/AndroidProject/PuzzleListActivity.java" />
         <option value="$PROJECT_DIR$/res/layout/puzzle.xml" />
+        <option value="$PROJECT_DIR$/src/com/example/AndroidProject/PuzzleHandler.java" />
+        <option value="$PROJECT_DIR$/src/com/example/AndroidProject/PuzzleView.java" />
+        <option value="$PROJECT_DIR$/src/com/example/AndroidProject/MyActivity.java" />
+        <option value="$PROJECT_DIR$/src/com/example/AndroidProject/NextLevelActivity.java" />
         <option value="$PROJECT_DIR$/src/com/example/AndroidProject/PuzzleActivity.java" />
+        <option value="$PROJECT_DIR$/res/layout/nextlevel.xml" />
+        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
+    <option name="x" value="960" />
     <option name="width" value="960" />
     <option name="height" value="1032" />
   </component>
@@ -237,7 +262,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -340,25 +364,26 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="project.structure.last.edited" value="SDKs" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="options.lastSelected" value="vcs.Git" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/IdeaProjects/activity-lifecycle" />
     <property name="AndroidLayoutSelectedEditor" value="android-designer" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -397,19 +422,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -435,6 +447,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -559,18 +584,18 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="960" height="1032" extended-state="0" />
+    <frame x="960" y="0" width="960" height="1032" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328125" sideWeight="0.7327189" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328125" sideWeight="0.7327189" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6808036" sideWeight="0.7327189" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31919643" sideWeight="0.7327189" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295711" sideWeight="0.49786553" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15705128" sideWeight="0.510158" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34101382" sideWeight="0.6008538" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26728112" sideWeight="0.11495536" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33972913" sideWeight="0.59551764" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.261851" sideWeight="0.122732125" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33069977" sideWeight="0.48932764" order="10" side_tool="false" content_ui="tabs" />
@@ -579,8 +604,8 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24776785" sideWeight="0.7327189" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26728112" sideWeight="0.87723213" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3325893" sideWeight="0.7327189" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26728112" sideWeight="0.87353253" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -648,68 +673,23 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/android-sdk/sources/android-17/android/view/View.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="0" selection-start="771" selection-end="771" vertical-scroll-proportion="-17.6">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="50" selection-start="779" selection-end="779" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/AndroidProject/Action.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="24" selection-start="343" selection-end="343" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/AndroidProject/DragEventHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="23" selection-start="252" selection-end="252" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Android/android-sdk/sources/android-17/android/app/Activity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5114" column="51" selection-start="215595" selection-end="215595" vertical-scroll-proportion="0.72727275">
+        <state line="3601" column="0" selection-start="140124" selection-end="140124" vertical-scroll-proportion="0.33208254">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/challenge.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="46" selection-start="533" selection-end="533" vertical-scroll-proportion="0.0">
+        <state line="132" column="16" selection-start="8708" selection-end="8708" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/AndroidProject/PuzzleListActivity.java">
+    <entry file="file://$PROJECT_DIR$/src/com/example/AndroidProject/Action.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="13" selection-start="604" selection-end="604" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/AndroidProject/Block.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="95" selection-start="589" selection-end="589" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="22" selection-start="116" selection-end="116" vertical-scroll-proportion="0.0">
+        <state line="19" column="18" selection-start="343" selection-end="343" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -721,49 +701,62 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/AndroidProject/MyActivity.java">
+    <entry file="file://$PROJECT_DIR$/res/layout/puzzle.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="13" selection-start="163" selection-end="163" vertical-scroll-proportion="0.03663004">
+        <state line="28" column="44" selection-start="1311" selection-end="1311" vertical-scroll-proportion="-8.0">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/AndroidProject/PuzzleListActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="0" selection-start="36" selection-end="36" vertical-scroll-proportion="0.031847134">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/AndroidProject/Block.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="77" column="32" selection-start="2140" selection-end="2140" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/AndroidProject/DragEventHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="23" selection-start="252" selection-end="252" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/android-sdk/sources/android-17/android/view/Choreographer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="564" column="0" selection-start="22993" selection-end="22993" vertical-scroll-proportion="0.33333334">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/AndroidProject/PuzzleHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="193" column="33" selection-start="7038" selection-end="7038" vertical-scroll-proportion="0.037523452">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Android/android-sdk/sources/android-17/android/view/View.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3601" column="0" selection-start="140124" selection-end="140124" vertical-scroll-proportion="0.33208254">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/puzzle.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state line="19" column="19" selection-start="858" selection-end="858" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="28" column="0" selection-start="649" selection-end="732" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="method#readChallenge#1;class#PuzzleHandler#0" expanded="false" />
+            <element signature="e#2826#2833#0" expanded="true" />
+            <element signature="e#3258#3266#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/AndroidProject/PuzzleView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="46" selection-start="913" selection-end="913" vertical-scroll-proportion="0.0">
+        <state line="128" column="0" selection-start="4316" selection-end="4316" vertical-scroll-proportion="-7.12">
           <folding>
-            <element signature="docComment;class#PuzzleView#0" expanded="false" />
-            <element signature="e#813#820#0" expanded="true" />
-            <element signature="method#PuzzleView#0;class#PuzzleView#0" expanded="false" />
-            <element signature="method#setCustomEventHandler#0;class#PuzzleView#0" expanded="false" />
+            <element signature="e#988#995#0" expanded="true" />
             <element signature="method#onMeasure#0;class#PuzzleView#0" expanded="false" />
-            <element signature="method#addShapes#0;class#PuzzleView#0" expanded="false" />
             <element signature="method#onDraw#0;class#PuzzleView#0" expanded="false" />
-            <element signature="method#onTouchEvent#0;class#PuzzleView#0" expanded="false" />
             <element signature="method#shapeLocatedOn#0;class#PuzzleView#0" expanded="false" />
             <element signature="method#getBlockFromLeft#0;class#PuzzleView#0" expanded="false" />
             <element signature="method#getBlockFromRight#0;class#PuzzleView#0" expanded="false" />
@@ -774,20 +767,139 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/AndroidProject/NextLevelActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="51" selection-start="1153" selection-end="1153" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/AndroidProject/PuzzleActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="101" column="34" selection-start="3176" selection-end="3176" vertical-scroll-proportion="-0.0050251256">
+        <state line="172" column="53" selection-start="5486" selection-end="5486" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#1873#2016#0" expanded="true" />
-            <element signature="e#2005#2006#0" expanded="true" />
-            <element signature="e#2967#3151#0" expanded="true" />
-            <element signature="e#3132#3133#0" expanded="true" />
-            <element signature="e#3746#3950#0" expanded="true" />
-            <element signature="e#3927#3928#0" expanded="true" />
+            <element signature="method#puzzle#0;class#PuzzleActivity#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/nextlevel.xml">
+      <provider editor-type-id="text-editor">
+        <state line="53" column="19" selection-start="2696" selection-end="2696" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/AndroidProject/MyActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="34" selection-start="531" selection-end="531" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="55" selection-start="451" selection-end="451" vertical-scroll-proportion="0.2882883">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor>
+            <show-content>
+              <type id="artifact" />
+              <type id="library" />
+            </show-content>
+          </artifact-editor>
+          <last-edited>AndroidProject</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Android</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>Android 4.2.2 Platform</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>Android|AndroidProject</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
 

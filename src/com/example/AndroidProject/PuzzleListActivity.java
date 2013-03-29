@@ -53,6 +53,7 @@ public class PuzzleListActivity extends ListActivity {
 
         editor.putInt("IdOfPuzzle",puzzles.get(position));
         editor.commit();
+        intent.putExtra(Intent.EXTRA_TEXT, Integer.toString(puzzles.get(position)));
 
         startActivity(intent);
     }
