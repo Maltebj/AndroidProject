@@ -112,11 +112,12 @@ public class PuzzleView extends View {
                 break;
             case MotionEvent.ACTION_UP:
                 if(mMovingShape != null){
+                    SnapToGrid();
                     mMovingShape = null;
                     if(mListener != null){
                         mListener.onShapeMoved();
-                        //TODO snap to grid.
-                        //invalidate();
+
+                        invalidate();
                     }
                 }
                 break;
@@ -228,6 +229,26 @@ public class PuzzleView extends View {
             return getHeight()-SHAPE_SIZE*mMovingShape.getLength();
         }
         return (finalValue*SHAPE_SIZE-(mMovingShape.getLength()*SHAPE_SIZE));
+
+    }
+    private void SnapToGrid(){
+        if (mMovingShape.getOrientation().equals(Block.Orientation.Vertical))
+        {
+            int newY = mMovingShape.getRect().top;
+            double number = Math.round(newY/SHAPE_SIZE);
+            newY = (int)number*SHAPE_SIZE;
+            mMovingShape.getRect().offsetTo(mMovingShape.getRect().left,newY);
+        }
+        else{
+            int newX = mMovingShape.getRect().left;
+            double number = Math.round(newX/SHAPE_SIZE);
+            newX = (int)number*SHAPE_SIZE;
+            mMovingShape.getRect().offsetTo(newX,mMovingShape.getRect().top);
+
+
+        }
+
+
 
     }
 
